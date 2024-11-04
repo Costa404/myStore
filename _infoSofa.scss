@@ -1,0 +1,252 @@
+@use "./index" as *;
+
+.info-sofa-first {
+  @include flex(flex, column, null, null, null);
+  @include dimensions(80%, null, 0 auto, 75px 0, null);
+}
+
+.info-sofa {
+  @include flex(flex, row, null, null, null);
+  @include dimensions(100%, null, 0 auto, null, null);
+
+  img {
+    width: 75%;
+    height: 100%;
+    padding-right: 20px;
+  }
+
+  div {
+    @include flex(flex, column, space-between, null, 30px);
+
+    h4 {
+      font-size: 2rem;
+    }
+  }
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      width: 50%;
+      height: 40px;
+      border: none;
+      background-color: #fced70;
+      border-radius: 2px;
+    }
+  }
+
+  .bolas,
+  .quadrados {
+    @include flex(flex, row, null, null, 10px);
+
+    span {
+      color: #a2a2a2;
+    }
+
+    span {
+      @include flex(flex, row, null, null, 10px);
+    }
+
+    li {
+      width: 20px;
+      height: 20px;
+
+      border-radius: 100%;
+    }
+  }
+
+  .bolas {
+    :nth-child(1) {
+      background-color: red;
+    }
+    :nth-child(2) {
+      background-color: yellow;
+    }
+    :nth-child(3) {
+      background-color: green;
+    }
+    :nth-child(4) {
+      background-color: blue;
+    }
+    :nth-child(5) {
+      background-color: pink;
+    }
+    :nth-child(6) {
+      background-color: black;
+    }
+  }
+
+  .quadrados {
+    flex-direction: column;
+    li {
+      border-radius: 10%;
+      border: 1px solid #a2a2a2;
+    }
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+.sub-content-first {
+  width: 25%;
+}
+
+.margin-subT {
+  margin-bottom: 10px;
+}
+//  ============================
+
+// second
+
+//   ===========================
+
+.info-sofa-second {
+  @include flex(flex, column, null, null, 30px);
+  p {
+    color: #a2a2a2;
+  }
+  h6 {
+    font-size: 2rem;
+  }
+
+  @include dimensions(80%, null, 0 auto, null, null);
+  padding-top: 100px;
+
+  div {
+    @include flex(flex, row, null, null, null);
+    @include dimensions(100%, null, 0 auto, 25px 0, null);
+
+    span {
+      @include flex(flex, row, space-between, null, null);
+      width: 80%;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+#sub-content-second {
+  @include flex(flex, column, null, null, 20px);
+}
+
+.border-second {
+  border-bottom: 1px solid #a2a2a2;
+  p {
+    padding-bottom: 10px;
+  }
+}
+
+// .img-second {
+//   width: 50%;
+// }
+
+.info-sofa-third {
+  h6 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  div {
+    @include flex(flex, row, null, null, 30px);
+    p {
+      padding-top: 30px;
+
+      h6 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.info-sofa-third,
+.icons {
+  @include flex(flex, column, null, null, 30px);
+  @include dimensions(80%, null, 0 auto, 75px 0, null);
+}
+
+.icons {
+  font-size: 1.5rem;
+
+  h6 {
+    font-size: 2rem;
+  }
+}
+
+.content-icons {
+  display: flex;
+  width: 100%;
+
+  div {
+    @include flex(flex, column, null, center, null);
+  }
+  img {
+    width: 100%;
+  }
+}
+.info-sofa-fourth,
+.info-sofa-fifth {
+  @include flex(flex, row, null, null, 30px);
+  @include dimensions(80%, null, 0 auto, 75px 0, null);
+}
+
+.info-sofa-fifth,
+.info-sofa-fourth {
+  font-size: 2rem;
+
+  p {
+    font-size: 1.2rem;
+  }
+  div {
+    @include flex(flex, column, null, null, 30px);
+
+    span {
+      @include flex(null, row, null, null, 30px);
+    }
+  }
+
+  .video {
+    width: 50%;
+  }
+}
+#span-col {
+  @include flex(flex, row, null, null, 30px);
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+.info-sofa-sixth {
+  @include flex(flex, column, center, null, 10px);
+  @include dimensions(100%, null, 0 auto, 75px 0, null);
+  .title-threeS {
+    @include flex(flex, null, center, null, null);
+    font-size: 2rem;
+  }
+
+  section {
+    @include flex(flex, row, center, null, 10px);
+  }
+  div {
+    @include flex(flex, column, null, null, 10px);
+    padding-top: 30px;
+    width: 27%;
+    h6 {
+      font-size: 1.5rem;
+    }
+
+    img {
+      cursor: pointer;
+      width: 95%;
+    }
+  }
+}
+
+.padding-left {
+  padding-left: 15px;
+}

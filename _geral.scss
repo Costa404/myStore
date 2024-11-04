@@ -1,0 +1,312 @@
+@use "./index" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.mobile-sub-header {
+  display: none;
+}
+
+header {
+  @include flex(flex, row, space-between, center, null);
+  padding: 30px 20px;
+
+  .first-rect {
+    @include dimensions(125px, 40px, null, null, gainsboro);
+    border-radius: 5px;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+}
+li {
+  @include flex(flex, row, null, null, 55px);
+  a {
+    @include flex(flex, row, null, center, 10px);
+    font-size: 1.3rem;
+    white-space: nowrap;
+    i {
+      margin-top: 5px;
+    }
+  }
+}
+
+// ==================w
+
+// first-section
+
+// ===================
+
+.first-section {
+  div {
+    @include dimensions(100%, 650px, null, null, null);
+
+    background-image: url(./assets/splash-screen.webp);
+
+    background-size: cover;
+    position: relative;
+
+    p {
+      position: absolute;
+      top: 0px;
+      padding: 70px 200px;
+      font-size: 2rem;
+      color: $white;
+    }
+
+    span {
+      position: absolute;
+      top: 70px;
+      padding: 50px 200px;
+
+      button {
+        font-size: 1.5rem;
+        padding: 20px 30px;
+        background-color: #fced70;
+        border: #ccbd5c;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// ==================
+
+// second-section
+
+// ===================
+.second-section {
+  @include flex(flex, column, null, center, 50px);
+  @include dimensions(80%, null, 0 auto, null, null);
+  div {
+    @include flex(flex, row, null, null, 20px);
+    @include dimensions(100%, null, 0 auto, null, null);
+    flex-wrap: wrap;
+
+    :nth-child(2) {
+      cursor: pointer;
+    }
+
+    img {
+      @include dimensions(30.4%, 250px, 0 auto, null, null);
+    }
+  }
+  p {
+    font-size: 3rem;
+    margin-top: 50px;
+  }
+}
+// ==================
+
+// third-section
+
+// ===================
+.third-section {
+  width: 100%;
+  background-color: $bg-colorOne;
+  margin-top: 50px;
+
+  .third-content {
+    @include flex(flex, row, null, null, 75px);
+    @include dimensions(60%, null, 0 auto, 100px 0px, null);
+
+    p {
+      @include flex(flex, row, null, center, 25px);
+      font-size: 1.3rem;
+    }
+  }
+}
+// ==================
+
+// fourth-section
+
+// ===================
+.fourth-section {
+  @include flex(flex, column, null, center, 50px);
+  @include dimensions(60%, null, 0 auto, null, null);
+  div {
+    @include flex(flex, row, null, null, 20px);
+    @include dimensions(100%, null, 0 auto, null, null);
+
+    overflow-x: auto;
+
+    img {
+      @include dimensions(100%, 350px, 0 auto, null, null);
+    }
+  }
+  p {
+    font-size: 3rem;
+    margin-top: 50px;
+  }
+}
+// ==================
+
+// fifth-section
+
+// ===================
+.fifth-section {
+  width: 100%;
+  background-color: $bg-colorOne;
+  margin-top: 50px;
+  position: relative;
+
+  .fifth-content {
+    @include flex(flex, column, null, null, 25px);
+    @include dimensions(80%, null, 0 auto, 100px, null);
+
+    p {
+      font-size: 1rem;
+      letter-spacing: 3px;
+      line-height: 1.5;
+    }
+    a {
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 800;
+    }
+  }
+  #nomad {
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 600;
+    letter-spacing: 10px;
+  }
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    height: 400px;
+    object-fit: contain;
+  }
+}
+// ==================
+
+// sixth-section
+
+// ===================
+.sixth-section {
+  @include flex(flex, column, null, center, 50px);
+  @include dimensions(100%, null, 0 auto, null, null);
+  div {
+    @include flex(flex, row, null, null, 20px);
+    @include dimensions(60%, null, 0 auto, null, null);
+
+    img {
+      @include dimensions(60%, 200px, 0 auto, null, null);
+    }
+  }
+  p {
+    font-size: 3rem;
+    margin-top: 50px;
+  }
+
+  span {
+    button {
+      font-size: 1.5rem;
+      padding: 20px 30px;
+      background-color: #fced70;
+      border: #ccbd5c;
+      border-radius: 5px;
+    }
+  }
+  video {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+// ==================
+
+// eight-section
+
+// ===================
+
+.eighth-section {
+  padding-top: 100px;
+}
+.content-eighth {
+  @include flex(flex, row, space-between, null, null);
+  @include dimensions(100%, null, null, 50px, #514f4d);
+  div {
+    @include flex(flex, row, null, null, null);
+    width: 100%;
+    i {
+      font-size: 2rem;
+      color: $white;
+    }
+    button {
+      background-color: $bg-colorOne;
+      border: none;
+      padding: 20px 30px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      font-size: 1.2rem;
+    }
+    input {
+      @include dimensions(35%, null, null, 20px, #514f4d);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      color: $white;
+      border: 1px solid $bg-colorOne;
+    }
+    input::placeholder {
+      width: 100%;
+    }
+  }
+}
+
+.social-nt {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.ninth-section {
+  @include flex(flex, column, space-between, null, null);
+  background-color: rgba(19, 19, 19, 255);
+}
+
+.ninth-section-content {
+  @include flex(flex, row, space-between, null, null);
+  @include dimensions(100%, null, null, 50px, rgba(19, 19, 19, 255));
+  div {
+    @include flex(flex, column, null, null, 10px);
+    a {
+      color: $white;
+      font-size: 0.8rem;
+      h6 {
+        font-size: 1rem;
+      }
+    }
+    ul {
+      @include flex(flex, column, null, null, 10px);
+      h6 {
+        font-size: 1rem;
+        color: $white;
+      }
+      li {
+        font-size: 0.8rem;
+        color: $white;
+      }
+    }
+  }
+}
+
+.sub-content-ninth {
+  @include flex(flex, row, space-between, null, null);
+  @include dimensions(100%, null, null, 50px 20px, null);
+
+  color: $white;
+}

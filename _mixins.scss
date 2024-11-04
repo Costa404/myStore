@@ -1,0 +1,20 @@
+@mixin media-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin flex($display, $direction, $justify, $align, $gap) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin dimensions($width, $height, $margin, $padding, $bg-color) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+  background-color: $bg-color;
+}
